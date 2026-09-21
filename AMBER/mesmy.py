@@ -39,7 +39,7 @@ inpcrd_file="abl_ligand.inpcrd"
 solute=271 # number of residues in solute
 T="310.0" # target temperature in K
 #PMEMD="pmemd.cuda" # name of your MD executable (e.g. may be "pmemd.MPI")
-PMEMD="mpirun -n $SLURM_NTASKS sander.MPI" # name of your MD executable (e.g. may be "pmemd.MPI")
+PMEMD="pmemd.MPI" # name of your MD executable (e.g. may be "pmemd.MPI")
 
 ### DO NOT MODIFY BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
