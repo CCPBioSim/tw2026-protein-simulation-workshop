@@ -14,6 +14,9 @@ def mesmy_cli():
                         help="Input Amber CRD file.", required=True)
     parser.add_argument("-p", "--prmtop",
                         help="Input Amber PRMTOP file.", required=True)
+    parser.add_argument("-temp", "--temperature",
+                        help="Simulation temperature.", default="310.0", 
+                        required=False)
     parser.add_argument("--version", action="version", version=__version__)
 
     args = parser.parse_args()
@@ -34,10 +37,10 @@ def mesmy_cli():
 #
 
 # You may wish to modify some of the parameters below.
-prmtop_file="abl_ligand.prmtop"
-inpcrd_file="abl_ligand.inpcrd"
-solute=271 # number of residues in solute
-T="310.0" # target temperature in K
+prmtop_file="{args.prmtop}"
+inpcrd_file="{args.inpcrd}"
+solute={nres} # number of residues in solute
+T="{args.temperature}" # target temperature in K
 PMEMD="pmemd.MPI" # name of your MD executable (e.g. may be "pmemd.MPI")
 
 ### DO NOT MODIFY BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING ###
