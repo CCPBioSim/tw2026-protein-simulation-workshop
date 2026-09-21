@@ -17,6 +17,9 @@ def mesmy_cli():
     parser.add_argument("-temp", "--temperature",
                         help="Simulation temperature.", default="310.0", 
                         required=False)
+    parser.add_argument("-exec", "--executable",
+                        help="Simulation temperature.", default="pmemd.MPI", 
+                        required=False)
     parser.add_argument("--version", action="version", version=__version__)
 
     args = parser.parse_args()
@@ -41,7 +44,7 @@ prmtop_file="{args.prmtop}"
 inpcrd_file="{args.inpcrd}"
 solute={nres} # number of residues in solute
 T="{args.temperature}" # target temperature in K
-PMEMD="pmemd.MPI" # name of your MD executable (e.g. may be "pmemd.MPI")
+PMEMD="{args.executable}" # name of your MD executable (e.g. may be "pmemd.MPI")
 
 ### DO NOT MODIFY BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
