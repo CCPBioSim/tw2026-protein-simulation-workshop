@@ -16,7 +16,7 @@ RUN conda install -y -c conda-forge \
     conda-forge::netcdf4=1.7.4 \
     conda-forge::nglview=4.0.1 \
     conda-forge::openmm=8.6.1 \
-    conda-forge::parmed= 4.3.1
+    conda-forge::parmed=4.3.1
 
 COPY docker/fix-nglview.sh /tmp/fix-nglview.sh
 RUN bash /tmp/fix-nglview.sh
