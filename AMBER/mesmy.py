@@ -18,7 +18,7 @@ def mesmy_cli():
                         help="Simulation temperature.", default="310.0", 
                         required=False)
     parser.add_argument("-exec", "--executable",
-                        help="Simulation temperature.", default="pmemd.MPI", 
+                        help="Simulation temperature.", default="sander.MPI", 
                         required=False)
     parser.add_argument("--version", action="version", version=__version__)
 
