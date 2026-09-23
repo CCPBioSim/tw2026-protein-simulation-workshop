@@ -55,7 +55,7 @@ cd "$(dirname "$0")"
 # Choose a name for the new environment
 # Note that deleting this will not clean up the micromamba cache, which may be
 # substantial.
-ENVNAME='cba_md_25b'
+ENVNAME='protein_sim_env'
 
 # The filename of the Conda environment file to run the notebook in
 ENV_FILE='environment.yaml'
