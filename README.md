@@ -1,7 +1,7 @@
 # CCPBioSim Protein Simulation Workshop
 
 [![ci](https://github.com/ccpbiosim/protein-simulation-workshop/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/ccpbiosim/protein-simulation-workshop/actions/workflows/build.yaml)
-[![latest](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fccpbiosim.github.io%2Fworkshop.json&query=%24.containers.protein-simulation-workshop.latest&labelColor=grey&logo=github&logoColor=white&label=latest&color=purple)](https://github.com/ccpbiosim/protein-simulation-workshop/pkgs/container/protein-simulation-workshop)
+[![latest](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fccpbiosim.github.io%2Fassets.json&query=%24.containers.protein-simulation-workshop.latest&labelColor=grey&logo=github&logoColor=white&label=latest&color=purple)](https://github.com/ccpbiosim/protein-simulation-workshop/pkgs/container/protein-simulation-workshop)
 [![issues](https://img.shields.io/github/issues/ccpbiosim/protein-simulation-workshop?logo=github&labelColor=grey)](https://github.com/CCPBioSim/protein-simulation-workshop/issues)
 [![pr](https://img.shields.io/github/issues-pr/ccpbiosim/protein-simulation-workshop?logo=github&labelColor=grey)](https://github.com/CCPBioSim/protein-simulation-workshop/pulls)
 
