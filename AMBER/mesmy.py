@@ -54,8 +54,8 @@ PMEMD="{args.executable}" # name of your MD executable (e.g. may be "pmemd.MPI")
 cat > step1.in <<EOF
 Min explicit solvent heavy atom rest no shake
 &cntrl
-  imin = 1, ntmin = 2, maxcyc = 2000,
-  ntwx = 1000, ioutfm = 1, ntpr = 50, ntwr = 500,
+  imin = 1, ntmin = 2, maxcyc = 1000,
+  ntwx = 500, ioutfm = 1, ntpr = 50, ntwr = 500,
   ntc = 1, ntf = 1, ntb = 1, cut = 8.0,
   igb = 0, saltcon = 0.0,
   ntr = 1, restraintmask = ':1-$solute & !@H=', restraint_wt = 5.0,
@@ -66,9 +66,9 @@ EOF
 cat > step2.in <<EOF
 MD explicit solvent heavy atom rest shake dt 0.001
 &cntrl
-  imin = 0, nstlim = 30000, dt=0.001,
+  imin = 0, nstlim = 1000, dt=0.001,
   ntx = 1, irest = 0, ig = -1,
-  ntwx = 1500, ioutfm = 1, ntpr = 50, ntwr = 500,
+  ntwx = 500, ioutfm = 1, ntpr = 50, ntwr = 500,
   iwrap = 1, nscm = 0,
   ntc = 2, ntf = 1, ntb = 1, cut = 8.0,
   ntt = 1, tautp = 0.5, temp0 = $T, tempi = $T,
@@ -82,8 +82,8 @@ EOF
 cat > step3.in <<EOF
 Min explicit solvent relaxed heavy atom rest no shake
 &cntrl
-  imin = 1, ntmin = 2, maxcyc = 2000,
-  ntwx = 1000, ioutfm = 1, ntpr = 50, ntwr = 500,
+  imin = 1, ntmin = 2, maxcyc = 1000,
+  ntwx = 500, ioutfm = 1, ntpr = 50, ntwr = 500,
   ntc = 1, ntf = 1, ntb = 1, cut = 8.0,
   igb = 0, saltcon = 0.0,
   ntr = 1, restraintmask = ':1-$solute & !@H=', restraint_wt = 2.0,
@@ -94,8 +94,8 @@ EOF
 cat > step4.in <<EOF
 Min explicit solvent minimal heavy atom rest no shake
 &cntrl
-  imin = 1, ntmin = 2, maxcyc = 2000,
-  ntwx = 1000, ioutfm = 1, ntpr = 50, ntwr = 500,
+  imin = 1, ntmin = 2, maxcyc = 1000,
+  ntwx = 500, ioutfm = 1, ntpr = 50, ntwr = 500,
   ntc = 1, ntf = 1, ntb = 1, cut = 8.0,
   igb = 0, saltcon = 0.0,
   ntr = 1, restraintmask = ':1-$solute & !@H=', restraint_wt = 0.1,
@@ -106,8 +106,8 @@ EOF
 cat > step5.in <<EOF
 Min explicit solvent no heavy atom res no shake
 &cntrl
-  imin = 1, ntmin = 2, maxcyc = 2000,
-  ntwx = 1000, ioutfm = 1, ntpr = 50, ntwr = 500,
+  imin = 1, ntmin = 2, maxcyc = 1000,
+  ntwx = 500, ioutfm = 1, ntpr = 50, ntwr = 500,
   ntc = 1, ntf = 1, ntb = 1, cut = 8.0,
   igb = 0, saltcon = 0.0,
   ntr = 0,
@@ -118,9 +118,9 @@ EOF
 cat > step6.in <<EOF
 MD explicit solvent heavy atom low rest shake dt 0.001
 &cntrl
-  imin = 0, nstlim = 10000, dt=0.001,
+  imin = 0, nstlim = 1000, dt=0.001,
   ntx = 1, irest = 0, ig = -1,
-  ntwx = 1000, ioutfm = 1, ntpr = 50, ntwr = 500,
+  ntwx = 500, ioutfm = 1, ntpr = 50, ntwr = 500,
   iwrap = 1, nscm = 0,
   ntc = 2, ntf = 1, ntb = 2, cut = 8.0,
   ntt = 1, tautp = 1.0, temp0 = $T, tempi = $T,
@@ -134,9 +134,9 @@ EOF
 cat > step7.in <<EOF
 MD explicit solvent heavy atom minimal rest shake dt 0.001, 10 ps, dt=.001
 &cntrl
-  imin = 0, nstlim = 10000, dt=0.001,
+  imin = 0, nstlim = 1000, dt=0.001,
   ntx = 5, irest = 1,
-  ntwx = 1000, ioutfm = 1, ntpr = 50, ntwr = 500,
+  ntwx = 500, ioutfm = 1, ntpr = 50, ntwr = 500,
   iwrap = 1, nscm = 0,
   ntc = 2, ntf = 1, ntb = 2, cut = 8.0,
   ntt = 1, tautp = 1.0, temp0 = $T, tempi = $T,
@@ -150,9 +150,9 @@ EOF
 cat > step8.in <<EOF
 MD explicit solvent heavy atom minimal BB rest shake dt 0.001
 &cntrl
-  imin = 0, nstlim = 10000, dt=0.001,
+  imin = 0, nstlim = 1000, dt=0.001,
   ntx = 5, irest = 1,
-  ntwx = 1000, ioutfm = 1, ntpr = 50, ntwr = 500,
+  ntwx = 500, ioutfm = 1, ntpr = 50, ntwr = 500,
   iwrap = 1, nscm = 0,
   ntc = 2, ntf = 1, ntb = 2, cut = 8.0,
   ntt = 1, tautp = 1.0, temp0 = $T, tempi = $T,
@@ -166,9 +166,9 @@ EOF
 cat > step9.in <<EOF
 MD explicit solvent heavy atom no rest shake dt 0.002
 &cntrl
-  imin = 0, nstlim = 10000, dt=0.002,
+  imin = 0, nstlim = 1000, dt=0.002,
   ntx = 5, irest = 1,
-  ntwx = 500, ioutfm = 1, ntpr = 1000, ntwr = 1000,
+  ntwx = 100, ioutfm = 1, ntpr = 1000, ntwr = 1000,
   iwrap = 1, nscm = 1000,
   ntc = 2, ntf = 1, ntb = 2, cut = 8.0,
   ntt = 1, tautp = 1.0, temp0 = $T, tempi = $T,
@@ -186,7 +186,7 @@ for RUN in step1 step2 step3 step4 step5 ; do
  echo "Minimization phase: $RUN"
  echo "------------------------"
  if [[ ! -f $RUN.rst7 ]]; then
-     echo "File -- $RUN.rst7 -- does not exists. Running job..."
+     echo "File -- $RUN.rst7 -- does not exist. Running job..."
      $PMEMD -O -i $RUN.in -p $prmtop_file -c $inpcrd_file -ref $inpcrd_file -o $RUN.out -x $RUN.nc -r $RUN.rst7 -inf $RUN.mdinfo
  else
      echo "File -- $RUN.rst7 -- exists.  Checking the next step."
@@ -203,7 +203,7 @@ for RUN in step6 step7 step8 step9 ; do
  echo "Equilibration phase: $RUN"
  echo "------------------------"
  if [[ ! -f $RUN.rst7 ]]; then
-     echo "File -- $RUN.rst7 -- does not exists. Running job..."
+     echo "File -- $RUN.rst7 -- does not exist. Running job..."
      $PMEMD -O -i $RUN.in -p $prmtop_file -c $inpcrd_file -ref $REF -o $RUN.out -x $RUN.nc -r $RUN.rst7 -inf $RUN.mdinfo
  else
      echo "File -- $RUN.rst7 -- exists.  Checking the next step."
