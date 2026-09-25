@@ -15,6 +15,8 @@ dependencies:
     # Examples
     - parmed
     - nglview>=3.0.6,<3.1.0
+    - matplotlib
+    - pandas
     - netCDF4
     - mdtraj
     - openmm
