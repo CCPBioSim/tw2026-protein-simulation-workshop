@@ -23,7 +23,7 @@ RUN conda install -y -c conda-forge -c bioconda \
     conda-forge::ipywidgets=8.1.9 \
     #conda-forge::freesasa=2.2.1 \
     #conda-forge::gemmi=0.7.5 \
-    #conda-forge::matplotlib=3.11.2 \
+    conda-forge::matplotlib=3.11.2 \
     conda-forge::mdtraj=1.11.1 \
     conda-forge::netcdf4=1.7.4 \
     #conda-forge::networkx=3.7 \
@@ -32,6 +32,7 @@ RUN conda install -y -c conda-forge -c bioconda \
     conda-forge::openmm=8.6.1 \
     conda-forge::openmpi=5.0.10 \
     conda-forge::mpi4py \
+    conda-forge::pandas=3.0.6 \
     conda-forge::parmed=4.3.1
     #conda-forge::rich=15.0.0 \
     #conda-forge::scikit-learn=1.9.1 \
