@@ -32,7 +32,7 @@ RUN conda install -y -c conda-forge -c bioconda \
     conda-forge::openmm=8.6.1 \
     conda-forge::openmpi=5.0.10 \
     conda-forge::mpi4py \
-    conda-forge::pandas=3.0.6 \
+    conda-forge::pandas \
     conda-forge::parmed=4.3.1
     #conda-forge::rich=15.0.0 \
     #conda-forge::scikit-learn=1.9.1 \
